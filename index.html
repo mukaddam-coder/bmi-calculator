@@ -8,21 +8,79 @@
     <!-- Tailwind + Daisy Ui CDN-->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        #merri-font{
+  font-family: "Merriweather", serif;
+  
+}
+    </style>
 </head>
-<body class="container mx-auto">
-    <header>
-        <nav class="bg-lime-500 p-5">
-            <div>
-                <img src="">
+<body id="merri-font" class="container mx-auto">
+    <header  class="bg-lime-500 rounded-xl">
+        <nav class="p-2 flex items-center justify-between">
+            <div class="flex items-center space-x-1">
+                <img class="w-12 h-12" src="assets/star.png">
                 <div>
-                    <h3>All Star Online Gym</h3>
+                    <h3 class="font-extrabold  text-gray-900">All Star Online Gym</h3>
                 </div>
             </div>
-            <div>
-
+            <div class="space-x-4 p-2">
+            <button>Login</button>
+            <button class="bg-red-800 p-1 rounded-3xl text-white">Sign Up</button>
             </div>
         </nav>
     </header>
+    <main>
+        <!-- Banner Section -->
+         <section>
+            <div class="hero bg-base-200">
+                <div class="hero-content text-center">
+                  <div class="max-w-md">
+                    <h1 class="text-2xl font-bold bg-purple-500 p-2 rounded-3xl text-black">Adult and Child BMI Calculator</h1>
+                    <p class="py-6">
+                        The Adult and Child BMI Calculator is a tool used to determine a person's Body Mass Index (BMI) based on their weight and height.
+                    </p>
+                    <form>
+                        <label for="bmi">Calculate BMI for:</label>
+                        <select id="bmi" name="bmi" class="border border-slate-700 p-1">
+                          <option value="adult">Adult Age 20+</option>
+                          <option value="child">Child Age 2-19</option>
+                          </select>
+                          </form>
+                          <br>
+                          <div class="">
+                               <form>
+                                <label>Weight:</label>
+                                <input class="border border-slate-700 h-8 w-32" type="text">
+                                <select id="bmi" name="bmi" class="border border-slate-700 p-1">
+                                    <option value="pounds">Pounds</option>
+                                    <option value="kilograms">Kilograms</option>
+                                    </select>
+                               </form>
+                               <br>
+                               <form>
+                                <label>Height:</label>
+                                <input class="border border-slate-700 h-8 w-32" type="text">
+                                <select id="bmi" name="bmi" class="border border-slate-700 p-1">
+                                    <option value="feet">Feet</option>
+                                    <option value="inches">Inches</option>
+                                    <option value="centimeters">Centimeters</option>
+                                    <option value="meters">Meters</option>
+                                    </select>
+                               </form>
+                          </div>
+                      <br>
+                    <button class="btn btn-primary">Calculate</button>
+                  </div>
+                 
+                </div>
+              </div>
+         </section>
+    </main>
   
     <script src="script/calculator.js"></script>
 </body>
